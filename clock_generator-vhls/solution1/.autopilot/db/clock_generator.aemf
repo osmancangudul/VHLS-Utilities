@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1694340589026">
+  <ports id="1" name="slow_clock_signal" type="PortType" originalName="slow_clock_signal" coreId="1852142702" bitwidth="1" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="20" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="21" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="22" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="25" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="28" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="31" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="32" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="35" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="36" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="37" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="38" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="39" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="40" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="41" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="44" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@ports.0"/>
+  <edges id="45" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="95" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="96" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.7"/>
+  <blocks id="19" name="clock_generator" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="slow_clock_signal_local" lineNumber="21" originalName="slow_clock_signal_local" fileName="clock_generator.cpp" fileDirectory="../." coreId="0" bitwidth="1" opcode="load" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clock_generator.cpp" linenumber="21" fileDirectory="C:\vitis_example\Utilities"/>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="counter_load" lineNumber="23" fileName="clock_generator.cpp" fileDirectory="../." coreId="2420649216" bitwidth="32" opcode="load" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clock_generator.cpp" linenumber="23" fileDirectory="C:\vitis_example\Utilities"/>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="next_state_1" lineNumber="33" originalName="next_state" fileName="clock_generator.cpp" fileDirectory="../." rtlName="next_state_1_fu_46_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" bitwidth="1" opcode="icmp" m_display="0" m_delay="2.14" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clock_generator.cpp" linenumber="33" fileDirectory="C:\vitis_example\Utilities"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="next_counter" lineNumber="37" originalName="next_counter" fileName="clock_generator.cpp" fileDirectory="../." rtlName="next_counter_fu_52_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" bitwidth="32" opcode="add" m_display="0" m_delay="2.14" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clock_generator.cpp" linenumber="37" fileDirectory="C:\vitis_example\Utilities"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="next_counter_1" lineNumber="33" originalName="next_counter" fileName="clock_generator.cpp" fileDirectory="../." rtlName="next_counter_1_fu_58_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" bitwidth="32" opcode="select" m_display="0" m_delay="0.61" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clock_generator.cpp" linenumber="33" fileDirectory="C:\vitis_example\Utilities"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="next_state" lineNumber="33" originalName="next_state" fileName="clock_generator.cpp" fileDirectory="../." rtlName="next_state_fu_66_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" bitwidth="1" opcode="xor" m_display="0" m_topoIndex="6" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="clock_generator.cpp" linenumber="33" fileDirectory="C:\vitis_example\Utilities"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="next_state_2" lineNumber="21" originalName="next_state" fileName="clock_generator.cpp" fileDirectory="../." rtlName="next_state_2_fu_72_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" bitwidth="1" opcode="select" m_display="0" m_delay="0.81" m_topoIndex="7" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="clock_generator.cpp" linenumber="21" fileDirectory="C:\vitis_example\Utilities"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="state_write_ln48" lineNumber="48" fileName="clock_generator.cpp" fileDirectory="../." coreId="2416935856" opcode="store" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clock_generator.cpp" linenumber="48" fileDirectory="C:\vitis_example\Utilities"/>
+      <dataInputObjs>select</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="counter_write_ln49" lineNumber="49" fileName="clock_generator.cpp" fileDirectory="../." coreId="2435036616" opcode="store" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clock_generator.cpp" linenumber="49" fileDirectory="C:\vitis_example\Utilities"/>
+      <dataInputObjs>select</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="slow_clock_signal_write_ln50" lineNumber="50" fileName="clock_generator.cpp" fileDirectory="../." coreId="0" opcode="write" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clock_generator.cpp" linenumber="50" fileDirectory="C:\vitis_example\Utilities"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>slow_clock_signal</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="_ln52" lineNumber="52" fileName="clock_generator.cpp" fileDirectory="../." coreId="1330007552" opcode="ret" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="clock_generator.cpp" linenumber="52" fileDirectory="C:\vitis_example\Utilities"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="clock_generator.cpp">
+      <validLinenumbers>21</validLinenumbers>
+      <validLinenumbers>23</validLinenumbers>
+      <validLinenumbers>33</validLinenumbers>
+      <validLinenumbers>37</validLinenumbers>
+      <validLinenumbers>48</validLinenumbers>
+      <validLinenumbers>49</validLinenumbers>
+      <validLinenumbers>50</validLinenumbers>
+      <validLinenumbers>52</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="next_state_1_fu_46">
+    <nodeIds>10</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="next_counter_1_fu_58">
+    <nodeIds>12</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="next_state_fu_66">
+    <nodeIds>13</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="next_state_2_fu_72">
+    <nodeIds>14</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="next_counter_fu_52">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln49_store_fu_86">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="slow_clock_signal_local_load_fu_37">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="counter_load_load_fu_42">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln48_store_fu_80">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln50_write_fu_30">
+    <nodeIds>17</nodeIds>
+  </ioNodes>
+  <ioPorts name="slow_clock_signal">
+    <contents name="write">
+      <nodeIds>17</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="4" stage="1" latency="1"/>
+      <operations id="5" stage="1" latency="1"/>
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="clock_generator" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>19</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

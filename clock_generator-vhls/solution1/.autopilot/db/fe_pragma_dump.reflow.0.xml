@@ -1,0 +1,5 @@
+<pragmas>
+<pragma file="clock_generator.cpp" line="7" pragmaType="interface" parentfunction="clock_generator" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="clock_generator.cpp" line="10" pragmaType="interface" parentfunction="clock_generator" mode="ap_ctrl_none" port="return" name=""/>
+<pragma file="clock_generator.cpp" line="11" pragmaType="interface" parentfunction="clock_generator" mode="ap_none" port="slow_clock_signal" name="" register="0"/>
+</pragmas>

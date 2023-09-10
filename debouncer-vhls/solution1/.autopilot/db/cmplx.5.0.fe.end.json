@@ -1,0 +1,17 @@
+{
+    "0": {
+        "name": "debouncer",
+        "file": "debouncer.cpp",
+        "fileloc": "7",
+        "instructions": "23",
+        "total_instructions": "23",
+        "calls": "",
+        "basicblocks": "1",
+        "loads": {
+            "G": "3"
+        },
+        "stores": {
+            "G": "3"
+        }
+    }
+}

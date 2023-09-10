@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# xsim v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sun Sep 10 03:04:42 2023
+# Process ID: 23528
+# Current directory: C:/vitis_example/Utilities/debouncer-vhls/solution1/sim/verilog
+# Command line: xsim.exe -source {xsim.dir/debouncer/xsim_script.tcl}
+# Log file: C:/vitis_example/Utilities/debouncer-vhls/solution1/sim/verilog/xsim.log
+# Journal file: C:/vitis_example/Utilities/debouncer-vhls/solution1/sim/verilog\xsim.jou
+# Running On: osman, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 17009 MB
+#-----------------------------------------------------------
+start_gui
+source xsim.dir/debouncer/xsim_script.tcl
+open_wave_config debouncer_dataflow_ana.wcfg
+source debouncer.tcl
+close_sim

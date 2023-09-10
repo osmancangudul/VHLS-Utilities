@@ -1,0 +1,17 @@
+{
+    "0": {
+        "name": "clock_generator",
+        "file": "clock_generator.cpp",
+        "fileloc": "9",
+        "instructions": "15",
+        "total_instructions": "15",
+        "calls": "",
+        "basicblocks": "1",
+        "loads": {
+            "G": "2"
+        },
+        "stores": {
+            "G": "2"
+        }
+    }
+}

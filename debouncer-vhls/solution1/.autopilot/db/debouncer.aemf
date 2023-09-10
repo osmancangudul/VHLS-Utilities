@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1694304227371">
+  <ports id="1" name="sw" type="PortType" originalName="sw" coreId="1852142702" bitwidth="1">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="out_r" type="PortType" originalName="out" coreId="2899524736" bitwidth="1" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="32" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="33" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="34" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="35" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="36" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="39" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="42" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="45" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="46" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="49" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="50" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="51" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="52" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="54" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="55" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="56" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="57" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="58" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="59" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="60" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="61" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="62" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="63" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="64" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="65" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="68" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@ports.1"/>
+  <edges id="69" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="142" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="143" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="144" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.13"/>
+  <blocks id="29" name="debouncer" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="12" name="sw_read" lineNumber="7" originalName="sw" fileName="debouncer.cpp" fileDirectory="../." coreId="0" contextFuncName="debouncer" bitwidth="1" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="7" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataInputObjs>sw</dataInputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="state_load" lineNumber="24" fileName="debouncer.cpp" fileDirectory="../." coreId="0" contextFuncName="debouncer" bitwidth="1" opcode="load" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="24" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="out_tmp" lineNumber="26" originalName="out_tmp" fileName="debouncer.cpp" fileDirectory="../." coreId="2944017760" contextFuncName="debouncer" bitwidth="1" opcode="load" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="26" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="15" name="counter_load" lineNumber="35" fileName="debouncer.cpp" fileDirectory="../." coreId="0" contextFuncName="debouncer" bitwidth="64" opcode="load" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="35" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataOutputObjs>icmp</dataOutputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="16" name="icmp_ln35" lineNumber="35" fileName="debouncer.cpp" fileDirectory="../." rtlName="icmp_ln35_fu_65_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="debouncer" bitwidth="1" opcode="icmp" m_display="0" m_delay="2.92" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="35" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>xor</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="17" name="next_counter" lineNumber="39" originalName="next_counter" fileName="debouncer.cpp" fileDirectory="../." rtlName="next_counter_fu_71_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="debouncer" bitwidth="64" opcode="add" m_display="0" m_delay="2.92" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="39" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="18" name="next_counter_1" lineNumber="35" originalName="next_counter" fileName="debouncer.cpp" fileDirectory="../." rtlName="next_counter_1_fu_77_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="debouncer" bitwidth="64" opcode="select" m_display="0" m_topoIndex="7" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="35" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="next_state" lineNumber="35" originalName="next_state" fileName="debouncer.cpp" fileDirectory="../." rtlName="next_state_fu_85_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="debouncer" bitwidth="1" opcode="xor" m_display="0" m_topoIndex="8" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="35" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataInputObjs>icmp</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="next_state_1" lineNumber="26" originalName="next_state" fileName="debouncer.cpp" fileDirectory="../." rtlName="next_state_1_fu_91_p2" coreName="LogicGate" implIndex="auto" control="no" opType="xor" coreId="74" contextFuncName="debouncer" bitwidth="1" opcode="xor" m_display="0" m_topoIndex="9" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="26" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="next_counter_2" lineNumber="24" originalName="next_counter" fileName="debouncer.cpp" fileDirectory="../." rtlName="next_counter_2_fu_97_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="debouncer" bitwidth="64" opcode="select" m_display="0" m_delay="0.82" m_topoIndex="10" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="24" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="next_state_2" lineNumber="24" originalName="next_state" fileName="debouncer.cpp" fileDirectory="../." rtlName="next_state_2_fu_105_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="debouncer" bitwidth="1" opcode="select" m_display="0" m_delay="0.81" m_topoIndex="11" m_clusterGroupNumber="2">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="24" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataInputObjs>xor</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="out_tmp_1" lineNumber="24" originalName="out_tmp" fileName="debouncer.cpp" fileDirectory="../." rtlName="out_tmp_1_fu_113_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="debouncer" bitwidth="1" opcode="select" m_display="0" m_delay="0.81" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="24" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="previous_sw_write_ln51" lineNumber="51" fileName="debouncer.cpp" fileDirectory="../." coreId="538976288" contextFuncName="debouncer" opcode="store" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="51" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataInputObjs>select</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="state_write_ln52" lineNumber="52" fileName="debouncer.cpp" fileDirectory="../." coreId="0" contextFuncName="debouncer" opcode="store" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="52" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataInputObjs>select</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="counter_write_ln53" lineNumber="53" fileName="debouncer.cpp" fileDirectory="../." coreId="2949425808" contextFuncName="debouncer" opcode="store" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="53" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataInputObjs>select</dataInputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="out_r_write_ln54" lineNumber="54" fileName="debouncer.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="debouncer" opcode="write" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="54" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>out_r</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="_ln56" lineNumber="56" fileName="debouncer.cpp" fileDirectory="../." coreId="4294967295" contextFuncName="debouncer" opcode="ret" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="debouncer.cpp" linenumber="56" fileDirectory="C:\vitis_example\Utilities" functionName="debouncer"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="debouncer.cpp">
+      <validLinenumbers>7</validLinenumbers>
+      <validLinenumbers>24</validLinenumbers>
+      <validLinenumbers>26</validLinenumbers>
+      <validLinenumbers>35</validLinenumbers>
+      <validLinenumbers>39</validLinenumbers>
+      <validLinenumbers>51</validLinenumbers>
+      <validLinenumbers>52</validLinenumbers>
+      <validLinenumbers>53</validLinenumbers>
+      <validLinenumbers>54</validLinenumbers>
+      <validLinenumbers>56</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <expressionNodes realName="next_state_2_fu_105">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="out_tmp_1_fu_113">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="next_counter_2_fu_97">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="next_counter_fu_71">
+    <nodeIds>17</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="next_state_1_fu_91">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln35_fu_65">
+    <nodeIds>16</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="next_counter_1_fu_77">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="next_state_fu_85">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln52_store_fu_128">
+    <nodeIds>25</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln53_store_fu_134">
+    <nodeIds>26</nodeIds>
+  </ioNodes>
+  <ioNodes realName="out_tmp_load_fu_57">
+    <nodeIds>14</nodeIds>
+  </ioNodes>
+  <ioNodes realName="sw_read_read_fu_40">
+    <nodeIds>12</nodeIds>
+  </ioNodes>
+  <ioNodes realName="state_load_load_fu_53">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln54_write_fu_46">
+    <nodeIds>27</nodeIds>
+  </ioNodes>
+  <ioNodes realName="counter_load_load_fu_61">
+    <nodeIds>15</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln51_store_fu_122">
+    <nodeIds>24</nodeIds>
+  </ioNodes>
+  <ioPorts name="out_r">
+    <contents name="write">
+      <nodeIds>27</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="sw">
+    <contents name="read">
+      <nodeIds>12</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+    </states>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="debouncer" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>29</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

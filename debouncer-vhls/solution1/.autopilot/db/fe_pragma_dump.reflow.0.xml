@@ -1,0 +1,5 @@
+<pragmas>
+<pragma file="debouncer.cpp" line="8" pragmaType="interface" parentfunction="debouncer" mode="ap_none" port="sw" name="" register="0"/>
+<pragma file="debouncer.cpp" line="9" pragmaType="interface" parentfunction="debouncer" mode="ap_none" port="out" name="" register="0"/>
+<pragma file="debouncer.cpp" line="10" pragmaType="interface" parentfunction="debouncer" mode="ap_ctrl_none" port="return" name=""/>
+</pragmas>

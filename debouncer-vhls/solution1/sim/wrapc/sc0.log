@@ -1,0 +1,6 @@
+   Build using "C:/Xilinx/Vitis_HLS/2023.1/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_debouncer.cpp
+   Compiling debouncer.cpp_pre.cpp.tb.cpp
+   Compiling debouncer-tb.cpp_pre.cpp.tb.cpp
+   Compiling apatb_debouncer_ir.ll
+   Generating cosim.tv.exe

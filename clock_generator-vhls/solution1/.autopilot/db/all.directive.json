@@ -1,0 +1,48 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "clock_generator",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "INTERFACE",
+      "option": [
+        {
+          "name": "ap_ctrl_none",
+          "value": ""
+        },
+        {
+          "name": "port",
+          "value": "return"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/vitis_example/Utilities/clock_generator-vhls/solution1/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "clock_generator",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "clock_generator"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/vitis_example/Utilities/clock_generator-vhls/solution1/csynth.tcl",
+    "sourceLine": 19,
+    "success": true
+  }
+]

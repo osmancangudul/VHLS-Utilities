@@ -1,0 +1,121 @@
+
+
+================================================================
+== Vitis HLS Report for 'clock_generator'
+================================================================
+* Date:           Sun Sep 10 13:09:48 2023
+
+* Version:        2023.1 (Build 3854077 on May  4 2023)
+* Project:        clock_generator-vhls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: spartan7
+* Target device:  xc7s100-fgga676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  2.958 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|      0 ns|      0 ns|    1|    1|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.95>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%spectopmodule_ln9 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [clock_generator.cpp:9]   --->   Operation 2 'spectopmodule' 'spectopmodule_ln9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%specinterface_ln9 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty_2, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0" [clock_generator.cpp:9]   --->   Operation 3 'specinterface' 'specinterface_ln9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i1 %slow_clock_signal"   --->   Operation 4 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i1 %slow_clock_signal, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 5 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%slow_clock_signal_local = load i1 %state" [clock_generator.cpp:21]   --->   Operation 6 'load' 'slow_clock_signal_local' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%counter_load = load i32 %counter" [clock_generator.cpp:23]   --->   Operation 7 'load' 'counter_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (2.14ns)   --->   "%next_state_1 = icmp_eq  i32 %counter_load, i32 0" [clock_generator.cpp:33]   --->   Operation 8 'icmp' 'next_state_1' <Predicate = true> <Delay = 2.14> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 9 [1/1] (2.14ns)   --->   "%next_counter = add i32 %counter_load, i32 4294967295" [clock_generator.cpp:37]   --->   Operation 9 'add' 'next_counter' <Predicate = (!next_state_1)> <Delay = 2.14> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 2.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.61ns)   --->   "%next_counter_1 = select i1 %next_state_1, i32 9, i32 %next_counter" [clock_generator.cpp:33]   --->   Operation 10 'select' 'next_counter_1' <Predicate = true> <Delay = 0.61> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 11 [1/1] (0.00ns) (grouped into LUT with out node next_state_2)   --->   "%next_state = xor i1 %next_state_1, i1 1" [clock_generator.cpp:33]   --->   Operation 11 'xor' 'next_state' <Predicate = (slow_clock_signal_local)> <Delay = 0.00> <CoreInst = "LogicGate">   --->   Core 74 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 12 [1/1] (0.81ns) (out node of the LUT)   --->   "%next_state_2 = select i1 %slow_clock_signal_local, i1 %next_state, i1 %next_state_1" [clock_generator.cpp:21]   --->   Operation 12 'select' 'next_state_2' <Predicate = true> <Delay = 0.81> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.81> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%store_ln48 = store i1 %next_state_2, i1 %state" [clock_generator.cpp:48]   --->   Operation 13 'store' 'store_ln48' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%store_ln49 = store i32 %next_counter_1, i32 %counter" [clock_generator.cpp:49]   --->   Operation 14 'store' 'store_ln49' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%write_ln50 = write void @_ssdm_op_Write.ap_none.i1P0A, i1 %slow_clock_signal, i1 %slow_clock_signal_local" [clock_generator.cpp:50]   --->   Operation 15 'write' 'write_ln50' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%ret_ln52 = ret" [clock_generator.cpp:52]   --->   Operation 16 'ret' 'ret_ln52' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10.000ns, clock uncertainty: 2.700ns.
+
+ <State 1>: 2.958ns
+The critical path consists of the following:
+	'load' operation ('counter_load', clock_generator.cpp:23) on static variable 'counter' [9]  (0.000 ns)
+	'icmp' operation ('next_state', clock_generator.cpp:33) [10]  (2.145 ns)
+	'select' operation ('next_state', clock_generator.cpp:21) [14]  (0.813 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

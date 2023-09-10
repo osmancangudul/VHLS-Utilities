@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="timer.cpp" path="C:\vitis_example\Utilities\timer-vhls\timer.cpp"/>
+    <originFiles name="timer.h" path="C:\vitis_example\Utilities\timer-vhls\timer.h"/>
+  </source>
+  <testbench>
+    <originFiles name="timer-tb.cpp" path="C:\vitis_example\Utilities\timer-vhls\timer-tb.cpp"/>
+    <originFiles name="timer-tb.h" path="C:\vitis_example\Utilities\timer-vhls\timer-tb.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

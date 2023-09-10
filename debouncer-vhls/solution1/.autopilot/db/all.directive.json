@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "debouncer",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "debouncer"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/vitis_example/Utilities/debouncer-vhls/solution1/csynth.tcl",
+    "sourceLine": 17,
+    "success": true
+  }
+]
