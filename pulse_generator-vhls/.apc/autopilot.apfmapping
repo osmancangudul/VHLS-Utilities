@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="pulse_generator.cpp" path="C:\vitis_example\Utilities\pulse_generator-vhls\pulse_generator.cpp"/>
+    <originFiles name="pulse_generator.h" path="C:\vitis_example\Utilities\pulse_generator-vhls\pulse_generator.h"/>
+  </source>
+  <testbench>
+    <originFiles name="pulse_generator-tb.cpp" path="C:\vitis_example\Utilities\pulse_generator-vhls\pulse_generator-tb.cpp"/>
+    <originFiles name="pulse_generator-tb.h" path="C:\vitis_example\Utilities\pulse_generator-vhls\pulse_generator-tb.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
