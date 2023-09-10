@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="single_cycle_regular_pulses.cpp" path="C:\vitis_example\Utilities\single_cycle_regular_pulses-vhls\single_cycle_regular_pulses.cpp"/>
+    <originFiles name="single_cycle_regular_pulses.h" path="C:\vitis_example\Utilities\single_cycle_regular_pulses-vhls\single_cycle_regular_pulses.h"/>
+  </source>
+  <testbench>
+    <originFiles name="single_cycle_regular_pulses-tb.cpp" path="C:\vitis_example\Utilities\single_cycle_regular_pulses-vhls\single_cycle_regular_pulses-tb.cpp"/>
+    <originFiles name="single_cycle_regular_pulses-tb.h" path="C:\vitis_example\Utilities\single_cycle_regular_pulses-vhls\single_cycle_regular_pulses-tb.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
