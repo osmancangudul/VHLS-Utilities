@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="edge_detector.cpp" path="C:\Users\ossic\AppData\Roaming\Xilinx\Vitis\edge_detector-vhls\edge_detector.cpp"/>
+    <originFiles name="edge_detector.h" path="C:\Users\ossic\AppData\Roaming\Xilinx\Vitis\edge_detector-vhls\edge_detector.h"/>
+  </source>
+  <testbench>
+    <originFiles name="edge_detector-tb.cpp" path="C:\Users\ossic\AppData\Roaming\Xilinx\Vitis\edge_detector-vhls\edge_detector-tb.cpp"/>
+    <originFiles name="edge_detector-tb.h" path="C:\Users\ossic\AppData\Roaming\Xilinx\Vitis\edge_detector-vhls\edge_detector-tb.h"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

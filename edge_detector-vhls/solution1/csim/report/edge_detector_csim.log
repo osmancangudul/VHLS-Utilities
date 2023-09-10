@@ -1,0 +1,37 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../edge_detector-tb.cpp in debug mode
+   Compiling ../../../edge_detector.cpp in debug mode
+   Generating csim.exe
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 1 rising_edge = 1 faling_edge = 0
+input signal = 1 rising_edge = 0 faling_edge = 0
+input signal = 1 rising_edge = 0 faling_edge = 0
+input signal = 1 rising_edge = 0 faling_edge = 0
+input signal = 1 rising_edge = 0 faling_edge = 0
+input signal = 1 rising_edge = 0 faling_edge = 0
+input signal = 1 rising_edge = 0 faling_edge = 0
+input signal = 1 rising_edge = 0 faling_edge = 0
+input signal = 1 rising_edge = 0 faling_edge = 0
+input signal = 1 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 1
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+input signal = 0 rising_edge = 0 faling_edge = 0
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
